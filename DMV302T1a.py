@@ -60,12 +60,12 @@ def plot_scatter(x: np.ndarray, y: np.ndarray, scatterplot: Axes):
 
 def plot_histograms(axis_hist_x: Axes, axis_hist_y: Axes, x: np.ndarray, y: np.ndarray):
     axis_hist_x.hist(x, bins=30, color="#6baed6", edgecolor="white", linewidth=0.5)          # create x-axis histogram
-    axis_hist_x.set_ylabel("Frequency", labelpad=10)                                           # x-axis label
+    axis_hist_x.set_ylabel("Frequency", labelpad=10)                                           # y-axis label
     axis_hist_x.tick_params(axis="x", labelbottom=False)                                       # histogram bar spacing
 
     axis_hist_y.hist(y, bins=30, orientation="horizontal", color="#fc9272",                  # create y-axis histogram
                      edgecolor="white", linewidth=0.5)
-    axis_hist_y.set_xlabel("Frequency", labelpad=10)                                           # y-axis label
+    axis_hist_y.set_xlabel("Frequency", labelpad=10)                                           # x-axis label
     axis_hist_y.tick_params(axis="y", labelleft=False)                                         # histogram bar spacing
 
 
