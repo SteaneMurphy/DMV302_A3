@@ -1,0 +1,31 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# === Virtual Environments ===
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# === Testing / Coverage ===
+.pytest_cache/
+.coverage
+htmlcov/
+
+# === IDE / OS ===
+.vscode/
+.idea/
+.DS_Store
+
+# === Logs ===
+*.log
