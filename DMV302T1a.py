@@ -19,7 +19,6 @@ Returns:
 def preprocess_data(path:str) -> np.ndarray:
     rows = read_csv(path, skip_header=True)                                                    # import rows from CSV
     features = parse_rows_x_y(rows)                                                            # parse rows into numeric data format
-    features, mean, std = standardise(features)                                                # standardise the rows for clustering
 
     return features
 
@@ -46,7 +45,7 @@ def create_x_y_projection_plot():
     plot_scatter(x, y, scatterplot)                                                            # create scatterplot
     plot_histograms(axis_hist_x, axis_hist_y, x, y)                                            # create historgrams for both axes
 
-    pyplot.savefig("DMV302T1a.png")                                                            # save pyplot as image
+    pyplot.savefig("figures/DMV302T1a.png")                                                    # save pyplot as image
     pyplot.close()                                                                          
 
 
@@ -79,6 +78,8 @@ def create_layout(figure: Figure) -> tuple:
 """
 Assigns the standardised data to a scatterplot graph
 based on each data points (x, y) co-ords.
+
+X-Y projected as my student number ends in '9'
 """
 def plot_scatter(x: np.ndarray, y: np.ndarray, scatterplot: Axes):
     scatterplot.scatter(x, y, color="black", alpha=0.5, s=30)                                  # create scatterplot from given data

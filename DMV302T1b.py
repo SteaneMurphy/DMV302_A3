@@ -88,7 +88,7 @@ def create_3D_projection_plot(data: np.ndarray, labels: np.ndarray, centroids):
 
     scatterplot.view_init(elev=30, azim=45)                                             # 3D scatterplot angle and rotation
 
-    pyplot.savefig("DMV302T1b.png")
+    pyplot.savefig("figures/DMV302T1b.png")
     pyplot.close()
 
 
